@@ -14,17 +14,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: _title,
         theme: ThemeData(
           primarySwatch: Colors.purple,
         ),
         initialRoute: '/',
         routes: {
-          '/': (context) => const Note(),
+          '/': (context) => const Notes(),
           '/about': (context) => const AboutPage(),
           '/new_note': (context) => const NewNote(),
-          '/search': (context) => const Note(),
-          '/settings': (context) => const Note(),
+          '/search': (context) => const Notes(),
+          '/settings': (context) => const Notes(),
         });
   }
 }

@@ -10,6 +10,7 @@ class NewNote extends StatefulWidget {
   State<NewNote> createState() => _NewNoteState();
 }
 
+@Deprecated('use NewNoteDialog instead')
 class _NewNoteState extends State<NewNote> {
   TextEditingController commentController = TextEditingController();
   TextEditingController emailController = TextEditingController();

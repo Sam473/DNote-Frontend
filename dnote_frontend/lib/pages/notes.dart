@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../components/notes_app_bar.dart';
 import '../components/notes_navigation_bar.dart';
+import 'new_note_dialog.dart';
 
-class Note extends StatefulWidget {
-  const Note({Key? key}) : super(key: key);
+class Notes extends StatefulWidget {
+  const Notes({Key? key}) : super(key: key);
 
   @override
-  State<Note> createState() => _NoteState();
+  State<Notes> createState() => _NotesState();
 }
 
-class _NoteState extends State<Note> {
+class _NotesState extends State<Notes> {
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +37,14 @@ class _NoteState extends State<Note> {
               ),
             );
           }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showDialog(
+              context: context, builder: (context) => const NewNoteDialog());
+        },
+        backgroundColor: Colors.purple,
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
